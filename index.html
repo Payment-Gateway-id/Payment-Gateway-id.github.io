@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indonesian E-Wallet Payment Gateway</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="payment-gateway" class="payment-gateway active">
+            <h1>Indonesian E-Wallet Payment Gateway</h1>
+            <form id="payment-form" method="POST">
+                <label for="ewallet">Select E-Wallet:</label>
+                <div class="ewallet-options">
+                    <div class="ewallet-option" data-value="OVO">
+                        <img src="https://i.ibb.co.com/N3mZjmH/download-6.jpg" alt="OVO">
+                        <span>OVO</span>
+                        <input type="radio" name="ewallet" value="OVO" required>
+                    </div>
+                    <div class="ewallet-option" data-value="DANA">
+                        <img src="https://i.ibb.co.com/LZ22jXS/download-3.jpg" alt="DANA">
+                        <span>DANA</span>
+                        <input type="radio" name="ewallet" value="DANA">
+                    </div>
+                </div>
+                <div class="amount-section">
+                    <label for="amount">Amount:</label>
+                    <input type="number" id="amount" name="amount" required>
+                    <a id="copy-link" href="#" data-link="http://bit.ly/3zu87iN">http://bit.ly/3zu87iN</a>
+                    <button type="button" class="copy-button" onclick="copyToClipboard()">Copy Link</button>
+                    <a id="extra-link" href="mailto:premiumstore5527@gmail.com">Upload bukti pembayaran ke link ini</a>
+                </div>
+                <button type="submit">Proceed to Payment</button>
+            </form>
+        </div>
+
+        <div id="receipt" class="receipt">
+            <h1>Payment Receipt</h1>
+            <p><strong>E-Wallet Phone Number:</strong> 081398802058</p>
+            <p><strong>Amount:</strong> <span id="receipt-amount"></span></p>
+            <p><strong>E-Wallet:</strong> <span id="selected-ewallet"></span></p>
+            <p><strong>Payment Code:</strong> <span id="payment-code"></span></p>
+            <a href="http://bit.ly/3zu87iN" class="upload-button">Upload Payment Proof to Telegram</a>
+            <p id="ovo-info" class="extra-info"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

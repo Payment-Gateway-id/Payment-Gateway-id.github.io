@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.payment-gateway, .receipt {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.payment-gateway.active, .receipt.active {
+    display: block;
+}
+
+.payment-gateway h1, .receipt h1 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.payment-gateway label, .receipt p {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.ewallet-options {
+    display: flex; 
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ewallet-option {
+    display: flex;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.ewallet-option img {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+
+.ewallet-option input[type="radio"] {
+    display: none;
+}
+
+.ewallet-option.active {
+    border-color: #007bff;
+}
+
+.amount-section {
+    margin-bottom: 20px;
+}
+
+.amount-section label {
+    margin-bottom: 5px;
+}
+
+.amount-section input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.amount-section a {
+    display: block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.amount-section a:hover {
+    text-decoration: underline;
+}
+
+.payment-gateway button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.payment-gateway button:hover {
+    background-color: #0056b3;
+}
+
+.receipt p {
+    margin: 10px 0;
+}
+
+.receipt strong {
+    font-weight: bold;
+}
+
+.upload-button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.upload-button:hover {
+    background-color: #218838;
+}
+
+.extra-info {
+    font-size: 12px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.copy-button {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-top: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.copy-button:hover {
+    background-color: #0056b3;
+}
